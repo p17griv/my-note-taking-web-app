@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+        <div class="col-md-6 col-sm-6 col-xs-10">
+            <p *ngIf="error" class="note-error">{{error}}</p>
+            <div *ngIf="note" class="note">
+                <div class="note-inner">
+                    <button (click)="deleteNote(note)" class="note-delete-btn"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                    <h4 class="note-title"><textarea [(ngModel)]="title" autosize type="text" placeholder="Title" rows="1"></textarea></h4>
+                    <textarea [(ngModel)]="text" autosize type="text" placeholder="Note's text"></textarea>
+                    <p *ngIf="note.title === title && note.text === text" class="note-date">Last edit: {{date | date}}</p>
+                    <p *ngIf="error2" class="note-error">{{error2}}</p>
+                    <button *ngIf="note.title !== title || note.text !== text" (click)="editNote()">Update <span class="glyphicon glyphicon-pencil"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+    </div>
+</div>

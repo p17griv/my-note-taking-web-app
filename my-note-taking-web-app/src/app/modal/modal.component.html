@@ -1,0 +1,27 @@
+<div class="modal fade" id="APIModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="exampleModalLabel">Let's find you something to do!</h3>
+            </div>
+            <div *ngIf="!activity" class="modal-body">
+                <p>Loading...</p>
+            </div>
+            <div *ngIf="activity" class="modal-body">
+                <h4 class="activity-text">"{{activity.activity}}"</h4>
+                <p><span class="activity-property-title">Category</span>: {{activity.type | titlecase}}</p>
+                <p><span class="activity-property-title">For</span>: '{{activity.participants}}' person(s)</p>
+                <p *ngIf="activity.price != 0"><span class="activity-property-title">Cost</span> (est): {{activity.price}}€</p>
+                <p *ngIf="activity.price == 0"><span class="activity-property-title">Cost</span>: free</p>
+                <p *ngIf="activity.link"><span class="activity-property-title">Link</span>: <a href="{{activity.link}}" target="_blank">{{activity.link}}</a></p>
+            </div>
+            <div class="modal-footer">
+                <button *ngIf="activity" (click)="addActivityToNotes()" type="button" class="btn btn-secondary" data-dismiss="modal">Add as note</button>
+                <button (click)="callActivityApi()" type="button" class="btn btn-primary">Something else...</button>
+            </div>
+        </div>
+    </div>
+</div>

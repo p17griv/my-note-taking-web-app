@@ -1,0 +1,5 @@
+body {
+    background: url("./assets/chalkboard.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #2d2b2c;
+}

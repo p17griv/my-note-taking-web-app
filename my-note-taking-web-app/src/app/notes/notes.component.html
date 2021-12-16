@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="!notes.length">
+            <div class="col-md-4 col-sm-3"></div>
+            <div class="col-md-4 col-sm-6">
+                <p class="message">Add your first note!</p>
+            </div>
+            <div class="col-md-4 col-sm-3"></div>
+        </div>
+        <div *ngFor="let note of notes" routerLink="/notedetail/{{note.id}}" class="col-md-4 col-sm-6">
+            <div class="note">
+                <div class="note-inner">
+                    <button (click)="deleteNote(note)" class="note-delete-btn"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                    <h4 class="note-title">{{note.title}}</h4>
+                    <p class="note-text">{{note.text}}</p>
+                    <p class="note-date">Last edit: {{note.date | date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

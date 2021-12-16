@@ -1,0 +1,62 @@
+textarea, input {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+button {
+    float: right;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: rgba(255, 183, 0, 0.233);
+    background: transparent;
+}
+
+.note {
+    margin-top: 30px;
+    color: white;
+    font-family: Cabin Sketch;
+    border: ridge;
+    border-color: rgba(255, 183, 0, 0.233);
+    border-width: 5px 3px 3px 5px;
+    border-radius: 5px;
+}
+
+.note-inner {
+    overflow: auto;
+    padding: 15px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 183, 0, 0.1),
+        rgb(33, 37, 41) 1%
+      );
+}
+
+.note-delete-btn {
+    background: transparent;
+    border: none;
+    float: right;
+}
+
+.note-title {
+    text-align: center;
+}
+
+.note-text {
+    white-space: pre-wrap;
+}
+
+.note-date {
+    float: right;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.note-error {
+    color: red;
+    text-align: center;
+    border: dotted;
+    border-color: white;
+}

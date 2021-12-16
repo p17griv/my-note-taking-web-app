@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+        <div class="col-md-6 col-sm-6 col-xs-10">
+            <div class="note">
+                <div class="note-inner">
+                    <h4><textarea [(ngModel)]="title" autosize type="text" placeholder="Title" rows="1"></textarea></h4>
+                    <textarea [(ngModel)]="text" autosize type="text" placeholder="Add a new note..."></textarea>
+                    <p *ngIf="error" class="note-error">{{error}}</p>
+                    <button (click)="onCreate()">Create <span class="glyphicon glyphicon-plus-sign"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-1"></div>
+    </div>
+</div>
