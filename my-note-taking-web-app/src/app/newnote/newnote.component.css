@@ -1,26 +1,43 @@
-textarea, input {
+.note-title, .note-text {
     width: 100%;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     color: white;
     outline: none;
     border: none;
+    border-radius: 5px;
     resize: none;
+    padding: 10px;
+}
+
+.note-text {
+    font-size: 10px;
 }
 
 button {
+    padding: 5px;
+    font-size: 8px;
     float: right;
     border-width: 3px;
     border-radius: 5px;
-    border-color: rgba(255, 183, 0, 0.233);
-    background: transparent;
+    border-color: rgba(233, 161, 175, 0.4);
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(233, 161, 175, 0.1),
+        rgb(33, 37, 41) 1%
+        );
+}
+
+.title {
+    color: rgb(150, 227, 235);
+    text-align: center;
+    font-family: 'Callie Chalk Font';
 }
 
 .note {
-    margin-top: 30px;
     color: white;
-    font-family: Cabin Sketch;
+    font-family: 'Callie Chalk Font';
     border: ridge;
-    border-color: rgba(255, 183, 0, 0.233);
+    border-color: rgba(248, 218, 154, 0.4);
     border-width: 5px 3px 3px 5px;
     border-radius: 5px;
 }
@@ -30,14 +47,19 @@ button {
     padding: 15px;
     background: repeating-linear-gradient(
         45deg,
-        rgba(255, 183, 0, 0.1),
+        rgba(248, 218, 154, 0.1),
         rgb(33, 37, 41) 1%
-        );
+      );
 }
 
 .note-error {
-    color: red;
     text-align: center;
-    border: dotted;
-    border-color: white;
+    margin: 10px;
+}
+
+.note-error span {
+    color: red;
+    font-size: 10px;
+    width: max-content; 
+    border-bottom: solid rgba(255, 0, 0, 0.3) 1px;  
 }

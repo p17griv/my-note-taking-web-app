@@ -1,0 +1,28 @@
+.navbar {
+    font-family: 'Callie Chalk Font';
+    padding: 10px;
+    border-bottom: solid rgba(233, 161, 175, 0.4) 2px;
+    background: repeating-linear-gradient(
+        22deg,
+        rgba(233, 161, 175, 0.1),
+        rgb(33, 37, 41) 1%
+      );
+}
+
+.logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.title {
+    display: inline-block;
+}
+
+.current {
+    color: white;
+    border: dashed white;
+    border-radius: 30px;
+    background: none;
+}

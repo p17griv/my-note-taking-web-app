@@ -30,9 +30,9 @@ export class NoteService {
 
   getUniqueId(): string {
     while (true) {
-      const newId = Math.random().toString(36).substring(2,7);
+      const newId = Math.random().toString(36).substring(2,7); // Get a random 5-letter string
       if (! this.Notes.find(h => h.id === newId)) {
-        return newId;
+        return newId; // Return new id if it doesn't already exists
       }
     }
   }
@@ -47,7 +47,7 @@ export class NoteService {
   }
 
   deleteNote(note: Note): void {
-    const index = this.Notes.indexOf(note);
+    const index = this.Notes.indexOf(note); // Find the position of note in Notes array
     if (index !== -1) {
       this.Notes.splice(index, 1);
     }

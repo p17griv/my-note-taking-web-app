@@ -14,7 +14,7 @@
                 <h4 class="activity-text">"{{activity.activity}}"</h4>
                 <p><span class="activity-property-title">Category</span>: {{activity.type | titlecase}}</p>
                 <p><span class="activity-property-title">For</span>: '{{activity.participants}}' person(s)</p>
-                <p *ngIf="activity.price != 0"><span class="activity-property-title">Cost</span> (est): {{activity.price}}€</p>
+                <p *ngIf="activity.price != 0"><span class="activity-property-title">Cost</span>: {{activity.price}} (0 = free | 1 = expensive)</p>
                 <p *ngIf="activity.price == 0"><span class="activity-property-title">Cost</span>: free</p>
                 <p *ngIf="activity.link"><span class="activity-property-title">Link</span>: <a href="{{activity.link}}" target="_blank">{{activity.link}}</a></p>
             </div>

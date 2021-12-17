@@ -1,9 +1,10 @@
 .note {
     margin-top: 30px;
     color: white;
-    font-family: Cabin Sketch;
+    font-family: 'Callie Chalk Font';
+    font-size: 10px;
     border: ridge;
-    border-color: rgba(255, 183, 0, 0.233);
+    border-color: rgba(248, 218, 154, 0.4);
     border-width: 5px 3px 3px 5px;
     border-radius: 5px;
 }
@@ -13,7 +14,7 @@
     padding: 15px;
     background: repeating-linear-gradient(
         45deg,
-        rgba(255, 183, 0, 0.1),
+        rgba(248, 218, 154, 0.1),
         rgb(33, 37, 41) 1%
       );
 }
@@ -26,6 +27,10 @@
 
 .note-title {
     text-align: center;
+    color: rgb(150, 227, 235);
+    border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .note-text {
@@ -33,13 +38,20 @@
 }
 
 .note-date {
+    font-size: 8px;
     float: right;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(233, 161, 175, 0.5);
+    margin-top: 20px;
 }
 
 .message {
-    color: white;
+    font-family: 'Callie Chalk Font';
     text-align: center;
-    border: dotted;
-    border-color: white;
+}
+
+.message span {
+    color: rgb(177, 255, 113);
+    font-size: 10px;
+    width: max-content; 
+    border-bottom: solid rgba(177, 255, 113, 0.3) 1px;  
 }

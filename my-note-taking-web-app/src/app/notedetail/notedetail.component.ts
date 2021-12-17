@@ -12,8 +12,7 @@ export class NoteDetailComponent implements OnInit {
 
   note: Note | undefined;
   id = String(this.route.snapshot.paramMap.get('id'));
-  error = "";
-  error2 = "";
+  error = 0;
   title = "";
   text = "";
   date = "";
@@ -27,7 +26,7 @@ export class NoteDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getNote();
     if (this.note == null)
-      this.error = "There were no notes found with id: \"" + this.id + "\"!";
+      this.error = 1;
     else {
       this.title = this.note.title;
       this.text = this.note.text;
@@ -41,7 +40,7 @@ export class NoteDetailComponent implements OnInit {
 
   editNote(): void {
     if (this.text === "")
-      this.error2 = "Note must have some text!";
+      this.error = 2;
     else {
       const editedNote = {id: this.id, date: new Date().toISOString().substring(0,10), title: this.title, text: this.text};
       this.noteService.editNote(this.note!, editedNote);
