@@ -18,10 +18,10 @@
 
 .title {
     display: inline-block;
+    font-weight: bold;
 }
 
 .current {
-    color: white;
     border: dashed white;
     border-radius: 30px;
     background: none;

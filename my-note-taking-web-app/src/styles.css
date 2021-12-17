@@ -3,3 +3,24 @@ body {
     background-size: cover;
     background-color: #2d2b2c;
 }
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(233, 161, 175, 0.7) rgba(233, 161, 175, 0.4);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(233, 161, 175, 0.4);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(233, 161, 175, 0.7);
+    border-radius: 20px;
+    border: 3px solid rgba(233, 161, 175, 0.4);
+}
