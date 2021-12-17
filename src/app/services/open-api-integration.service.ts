@@ -10,6 +10,6 @@ export class OpenApiIntegrationService {
   constructor(private http: HttpClient) { }
 
   getOpenApiResult() {
-    return this.http.get<Activity>('http://www.boredapi.com/api/activity/', {observe: 'body'});
+    return this.http.get<Activity>('https://www.boredapi.com/api/activity/', {observe: 'body'});
   }
 }
